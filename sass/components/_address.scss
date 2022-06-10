@@ -1,0 +1,25 @@
+.address {
+    margin-right: 70px;
+    &__group {
+        font-style: normal;
+        line-height: 1.5;
+        text-align-last: left;
+    }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+    }
+    &__item {
+        margin: 0 0 9px 0;
+    }
+    &__item:last-child {
+        margin: 0;
+    }
+    &__link {
+        line-height: 24px;
+        letter-spacing: 0.03em;
+        color:rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+    }
+}

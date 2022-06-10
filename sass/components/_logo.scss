@@ -1,0 +1,22 @@
+.logo {
+    color:var(--brand-color);
+    font-family: var(--sec-font);
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    &--dark {
+       color: #000000;
+    }
+    &--bright {
+       color: #ffffff;
+    }
+    &--foot {
+        display: block;
+        margin: 0 0 20px 0;
+    }
+}
+
+
+

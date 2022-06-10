@@ -1,0 +1,37 @@
+.ourTeam {
+    background: #F5F4FA;
+    text-align: center;
+    &__item {
+        display: block;
+        width: 270px;
+        border-radius: 0px 0px 4px 4px;
+        text-align: center;
+        background-color: #ffffff;
+        margin-right: 30px;
+    }
+    &__item:last-child {
+        margin-right: 0;
+    }
+    &__text {
+        display: block;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    &__title {
+        color: var(--title-color);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.18;
+        letter-spacing: 0.03em;
+        margin: 0 0 10px;
+        padding: 0;
+    }
+    &__job-title {
+        color: var(--text-color);
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        line-height: 1.18;
+        margin: 0 0 16px;
+        padding: 0;
+    }
+}

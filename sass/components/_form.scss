@@ -1,0 +1,107 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    color: var(--text-color);
+    &__form-group {
+        position: relative;
+    }
+    &__form-group:nth-child(-n + 3) {
+        margin-bottom: 28px;
+    }
+    &__form-group:nth-child(4) {
+        margin-bottom: 20px;
+    }
+    &__label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateY(-100%);
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+    }
+    &__input {
+        position: relative;
+        padding-left: 42px;
+    }
+    &__textarea {
+    resize: none;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+    }
+    &__input,
+    &__textarea {
+        width: 100%;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        border: 1px solid rgba(33, 33, 33, 0.2);
+        border-radius: 4px;
+        background-color: inherit;
+        transition: outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:focus {
+            outline-color: var(--brand-color);
+        }
+        &:focus + .form__icon{
+            color: var(--brand-color);
+        }
+    }
+    &__icon {
+        position: absolute;
+        left: 12px;
+        top: 11px;
+        color: var(--title-color);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__checkbox-group {
+        display: flex;
+        margin-bottom: 30px;
+        align-items:center;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+    }
+    &__checkbox {
+        width: 16px;
+        height: 15px;
+        margin-right: 8px;
+        border: 2px solid var(--title-color);
+        border-radius:2px;
+    }
+    &__checkbox-link {
+        color: var(--brand-color);
+        margin-left: 5px;
+        text-decoration: none;
+    }
+    &__checkbox-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        clip:rect(0 0 0 0);
+        overflow: hidden;
+        &:focus + .form__checkbox {
+            border-color: var(--brand-color);
+        }
+        &:checked + .form__checkbox {
+            background-color: var(--brand-color);
+            border-color: transparent;
+            background-image: url(../images/check.svg);
+            background-size: contain;
+            background-origin: border-box;
+        }
+    }
+    &__submit-btn {
+        display: block;
+        margin: 0 auto;
+    }
+    
+}
