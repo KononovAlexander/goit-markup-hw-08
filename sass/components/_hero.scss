@@ -1,24 +1,62 @@
 .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     background-color: #2F303A;
     text-align: center;
+      @media screen and (min-width:1200px) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+      }
     &__title {
-         width: 696px;
-    margin: 0 auto 30px;
-    color: #ffffff;
-    font-size: 44px;
-    font-weight: 900;
-    text-transform: uppercase;  
-    line-height: 1.36;
-    letter-spacing: 0.06em;
+        width: 300px; ;
+        margin: 0 auto 30px;
+        padding: 0;
+        color: #ffffff;
+        font-weight: 900;
+        font-size: 26px;
+        line-height: 42px;
+        text-align: center;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        @media screen and (min-width:479px) {
+                  width: 360px;
+        }
+        @media screen and (min-width:1200px) {
+            width: 696px;
+            font-size: 44px;
+            line-height: 60px;
+        }
     }
 }
 .overlay{
     background: rgba(47, 48, 58, 0.4);
-    background-repeat: no-repeat;
     max-width: 1600px;
     margin: 0 auto;
     background-image:linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
+    ), url(../images/img-hero-480.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    background-origin: border-box;
+    @media (min-resolution: 2dppx) {
+      background-image:linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
+      ), url(../images/img-hero2x-480.jpg);
+    }
+    @media screen and (min-width: 768px) {
+
+      background-image:linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
+    ), url(../images/Imghero_bg760.jpg);
+       @media (min-resolution: 2dppx) {
+        background-image:linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
+        ), url(../images/img-hero2x-768.jpg);
+    }
+  }
+     @media screen and (min-width: 1200px) {
+        background-image:linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
     ), url(../images/Imghero-bg.jpg);
+         @media (min-resolution: 2dppx) {
+        background-image:linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)
+        ), url(../images/img-hero2x-1200.jpg);
+    }
+    }
 }

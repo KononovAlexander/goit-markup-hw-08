@@ -25,44 +25,82 @@
           <a href="/" class="logo"
             >Web<span class="logo--dark">Studio</span>
           </a>
+          <div class="nav__container" id="menu-container" data-menu>
+            <ul class="nav__list list">
+              <li class="nav__item nav__link--active">
+                <a href="./index.html" class="nav__link link"> Студия</a>
+              </li>
+              <li class="nav__item">
+                <a href="./portfolio.html" class="nav__link link"> Портфолио</a>
+              </li>
+              <li class="nav__item">
+                <a href="/" class="nav__link link"> Контакты</a>
+              </li>
+            </ul>
+            <ul class="contacts contacts--nav list">
+              <li class="contacts__item">
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="contacts__link contacts__link--mail icon-centered"
+                >
+                  <svg class="contacts__icon icon-color" width="24" height="16">
+                    <use href="./images/sprite.svg#icon-envelope"></use></svg
+                  >info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts__item">
+                <a
+                  href="tel:+380961111111"
+                  class="contacts__link contacts__link--tel icon-centered"
+                >
+                  <svg class="contacts__icon icon-color" width="16" height="24">
+                    <use href="./images/sprite.svg#icon-phone"></use></svg
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+            <ul class="socials-nav list">
+              <li class="socials-nav__item">
+                <a href="/" class="socials-nav__link">Instagram</a>
+              </li>
+              <li class="socials-nav__item">
+                <a href="/" class="socials-nav__link">Twitter</a>
+              </li>
+              <li class="socials-nav__item">
+                <a href="/" class="socials-nav__link">Facebook</a>
+              </li>
+              <li class="socials-nav__item">
+                <a href="/" class="socials-nav__link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
 
-          <ul class="nav__list list">
-            <li class="nav__item nav__link--active">
-              <a href="./index.html" class="nav__link link"> Студия</a>
-            </li>
-            <li class="nav__item">
-              <a href="./portfolio.html" class="nav__link link"> Портфолио</a>
-            </li>
-            <li class="nav__item">
-              <a href="/" class="nav__link link"> Контакты</a>
-            </li>
-          </ul>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            data-menu-button
+          >
+            <svg
+              class="icon-color"
+              width="40px"
+              height="40px"
+              aria-label="переключатель мобильного меню"
+              aria-controls="menu-container"
+            >
+              <use
+                href="./images/sprite.svg#icon-menu"
+                class="icon-menu icon-color is-open"
+              ></use>
+              <use
+                href="./images/sprite.svg#icon-menu-close"
+                class="icon-menu-close icon-color"
+              ></use>
+            </svg>
+          </button>
         </nav>
-        <ul class="contacts contacts--nav list">
-          <li class="contacts__item">
-            <a
-              href="mailto:info@devstudio.com"
-              class="contacts__link link icon-centered"
-            >
-              <svg class="contacts__icon icon-color" width="24" height="16">
-                <use href="./images/sprite.svg#icon-envelope"></use></svg
-              >info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a
-              href="tel:+380961111111"
-              class="contacts__link link icon-centered"
-            >
-              <svg class="contacts__icon icon-color" width="16" height="24">
-                <use href="./images/sprite.svg#icon-phone"></use></svg
-              >+38 096 111 11 11</a
-            >
-          </li>
-        </ul>
       </div>
     </header>
-
     <main>
       <section class="hero overlay">
         <div class="container">
@@ -74,11 +112,11 @@
         </div>
       </section>
 
-      <section class="skills section--no-gap">
+      <section class="skills section">
         <div class="container">
           <h2 class="hidden">Ососбенности</h2>
 
-          <ul class="skills__list list flex-block">
+          <ul class="skills__list list">
             <li class="skills__item">
               <div class="skills__icon-box icon-centered">
                 <svg width="70" height="70">
@@ -86,7 +124,7 @@
                 </svg>
               </div>
               <h3 class="skills__title">Внимание к деталям</h3>
-              <p class="">
+              <p class="skills__text">
                 Идейные соображения, а также начало повседневной работы по
                 формированию позиции.
               </p>
@@ -98,7 +136,7 @@
                 </svg>
               </div>
               <h3 class="skills__title">Пунктуальность</h3>
-              <p class="">
+              <p class="skills__text">
                 Задача организации, в особенности же рамки и место обучения
                 кадров влечет за собой.
               </p>
@@ -110,7 +148,7 @@
                 </svg>
               </div>
               <h3 class="skills__title">Планирование</h3>
-              <p class="">
+              <p class="skills__text">
                 Равным образом консультация с широким активом в значительной
                 степени обуславливает.
               </p>
@@ -122,7 +160,7 @@
                 </svg>
               </div>
               <h3 class="skills__title">Современные технологии</h3>
-              <p class="">
+              <p class="skills__text">
                 Значимость этих проблем настолько очевидна, что реализация
                 плановых заданий.
               </p>
@@ -131,7 +169,7 @@
         </div>
       </section>
 
-      <section class="works section">
+      <section class="works section__no-gap">
         <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="works__list list flex-block">
@@ -177,11 +215,32 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="ourTeam__list list flex-block">
             <li class="ourTeam__item">
-              <img
-                src="./images/team_1.jpg"
-                width="270"
-                alt="портрет Игорь Демьяненко"
-              />
+              <picture>
+                <source
+                  srcset="./images/person_1mob.jpg 450w"
+                  media="(max-width:768px )"
+                  sizes="(min-width: 480px) 450px, 100vw"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="./images/person_1tabl.jpg 354w"
+                  media="(max-width:1200px )"
+                  sizes="(min-width: 768px) 354px, 100vw"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="./images/person_1desc.jpg 810w"
+                  media="(max-width:1900px )"
+                  sizes="(min-width: 1200px) 270px, 100vw"
+                  type="image/jpeg"
+                />
+                <img
+                  class="outTeam__pct"
+                  src="./images/person_1mob.jpg"
+                  alt="портрет Игорь Демьяненко"
+                />
+              </picture>
+
               <div class="ourTeam__text">
                 <h3 class="ourTeam__title">Игорь Демьяненко</h3>
                 <p lang="en" class="ourTeam__job-title">Product Designer</p>
@@ -234,11 +293,31 @@
               </div>
             </li>
             <li class="ourTeam__item">
-              <img
-                src="./images/team_2.jpg"
-                width="270"
-                alt="портрет Ольга Репина"
-              />
+              <picture>
+                <source
+                  srcset="./images/person_2mob.jpg 450w"
+                  media="(max-width:768px )"
+                  sizes="(min-width: 480px) 450px, 100vw"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="./images/person_2tabl.jpg 354w"
+                  media="(max-width:1200px )"
+                  sizes="(min-width: 768px) 354px, 100vw"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="./images/person_2desc.jpg 810w"
+                  media="(max-width:1900px )"
+                  sizes="(min-width: 1200px) 270px, 100vw"
+                  type="image/jpeg"
+                />
+                <img
+                  class="outTeam__pct"
+                  src="./images/person_2mob.jpg"
+                  alt="портрет Ольга Репина"
+                />
+              </picture>
               <div class="ourTeam__text">
                 <h3 class="ourTeam__title">Ольга Репина</h3>
                 <p lang="en" class="ourTeam__job-title">Frontend Developer</p>
@@ -291,11 +370,32 @@
               </div>
             </li>
             <li class="ourTeam__item">
-              <img
-                src="./images/team_3.jpg"
-                width="270"
-                alt="портрет Николай Тарасов"
-              />
+              <picture>
+                <source
+                  srcset="./images/person_3mob.jpg 450w"
+                  media="(max-width:768px )"
+                  sizes="(min-width: 480px) 450px, 100vw"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="./images/person_3tabl.jpg 354w"
+                  media="(max-width:1200px )"
+                  sizes="(min-width: 768px) 354px, 100vw"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="./images/person_3desc.jpg 810w"
+                  media="(max-width:1900px )"
+                  sizes="(min-width: 1200px) 270px, 100vw"
+                  type="image/jpeg"
+                />
+                <img
+                  class="outTeam__pct"
+                  src="./images/person_3mob.jpg"
+                  alt="портрет Николай Тарасов"
+                />
+              </picture>
+
               <div class="ourTeam__text">
                 <h3 class="ourTeam__title">Николай Тарасов</h3>
                 <p lang="en" class="ourTeam__job-title">Marketing</p>
@@ -348,11 +448,31 @@
               </div>
             </li>
             <li class="ourTeam__item">
-              <img
-                src="./images/team_4.jpg"
-                width="270"
-                alt="портрет Михаил Ермаков"
-              />
+              <picture>
+                <source
+                  srcset="./images/person_4mob.jpg 450w"
+                  media="(max-width:768px )"
+                  sizes="(min-width: 480px) 450px, 100vw"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="./images/person_4tabl.jpg 354w"
+                  media="(max-width:1200px )"
+                  sizes="(min-width: 768px) 354px, 100vw"
+                  type="image/jpeg"
+                />
+                <source
+                  srcset="./images/person_4desc.jpg 810w"
+                  media="(max-width:1900px )"
+                  sizes="(min-width: 1200px) 270px, 100vw"
+                  type="image/jpeg"
+                />
+                <img
+                  class="outTeam__pct"
+                  src="./images/person_4mob.jpg"
+                  alt="портрет Михаил Ермаков"
+                />
+              </picture>
               <div class="ourTeam__text">
                 <h3 class="ourTeam__title">Михаил Ермаков</h3>
                 <p lang="en" class="ourTeam__job-title">UI Designer</p>
@@ -467,7 +587,7 @@
           </a>
 
           <address class="address__group">
-            <p>г. Киев, пр-т Леси Украинки, 26</p>
+            <p class="address__location">г. Киев, пр-т Леси Украинки, 26</p>
             <ul class="address__contacts list">
               <li class="address__item">
                 <a href="mailto:info@example.com" class="address__link"
@@ -484,7 +604,7 @@
         </div>
         <div class="socials">
           <p class="socials__title">присоединяйтесь</p>
-          <ul class="socials-list list icon-centered">
+          <ul class="socials-list-foot list icon-centered">
             <li class="socials-list__item">
               <a href="/" class="socials-list__link-dark icon-centered">
                 <svg class="icon-color" width="20" height="20">
@@ -534,6 +654,7 @@
         </div>
       </div>
     </footer>
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal-window">
         <button class="modal-window__close-btn icon-color" data-modal-close>
@@ -593,6 +714,7 @@
         </form>
       </div>
     </div>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

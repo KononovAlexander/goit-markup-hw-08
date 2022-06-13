@@ -1,6 +1,9 @@
 .socials-list {
     padding: 0;
     margin: 0 auto;
+    @media screen and(min-width:1200px) {
+        margin: 0;
+    }
     &__item {
         margin-right: 10px;
     }
@@ -24,6 +27,10 @@
             border-color:var(--brand-color);
         }
 
+
+    }
+    &-foot {
+        @extend .socials-list;        display: flex;
 
     }
     &__link-dark {

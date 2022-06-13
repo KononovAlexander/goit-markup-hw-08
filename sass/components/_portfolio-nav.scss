@@ -1,12 +1,30 @@
 .portfolio-nav {
     margin: 0 0 50px;
-    &__item {
-            margin-right: 8px;
-            &:last-child {
-                margin-right: 0;
-            }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding-left: 0;
+    @media screen and(min-width:767px) {
+        justify-content: center;
+        margin: 0 0 30px;
     }
-    &__btn {
+       @media screen and(min-width:1200px) {
+        margin: 0 0 50px;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+        &:not(:nth-last-child(-n + 2)) {
+            margin-bottom: 15px;
+        }
+        @media screen and(min-width:767px) {
+            &:not(:nth-last-child(-n + 2)) {
+                margin-bottom: 0;
+            }
+        }
+    }
+        &__btn {
         background-color: #F5F4FA;
         color: var(--title-color);
         font-family: inherit;

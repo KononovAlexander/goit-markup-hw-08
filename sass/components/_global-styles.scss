@@ -7,6 +7,7 @@
 body {
     font-family: var(--prime-font);
     font-size: 14px;
+    margin: 0;
 }
 
 .main-btn {
@@ -24,9 +25,20 @@ body {
 }
 
 .container{
-    width: 1200px;
     padding:  0 15px;
     margin: 0 auto;
+    @media screen and (min-width: 480px) {
+        max-width: 480px;
+        width: 100%;
+    }
+    @media screen and (min-width: 768px) {
+        max-width: 768px;
+        width: 100%;
+    }
+     @media screen and (min-width: 1200px) {
+        max-width: 1200px;
+        width: 100%;
+    }
 }
 
 .flex-block{
@@ -42,20 +54,34 @@ body {
 }
 
 .section{
-    padding: 94px 0 94px 0;
-    &--no-gap {
-        padding: 94px 0 0 0;
+    padding: 60px 0 60px 0;
+    @media screen and (min-width:1200px) {
+        padding: 94px 0 94px 0;
+        &__no-gap {
+            padding: 0  0 94px;
+
+        }
     }
+
     &__title {
-        color: var(--title-color);
         font-weight: 700;
-        font-size: 36px;
-        line-height: 1.16;
-        letter-spacing: 0.03em;
+        font-size: 28px;
+        line-height: 33px;
         text-align: center;
-        margin: 0 0 50px;
+        letter-spacing: 0.03em;
+        color: var(--title-color);
+        margin: 0 0 30px;
         padding: 0;
+        @media screen and(min-width:1200px) {            
+            font-size: 36px;
+            line-height: 1.16;
+            margin: 0 0 50px;
+        }
     }
+}
+
+.scroll-off {
+    overflow: hidden;
 }
 
 .hidden{
@@ -78,4 +104,7 @@ body {
 
 .icon-color {
     fill:currentColor;
+}
+.is-open {
+    display: flex;
 }

@@ -2,8 +2,8 @@
     color:var(--brand-color);
     font-family: var(--sec-font);
     font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 28px;
     letter-spacing: 0.03em;
     text-decoration: none;
     &--dark {
@@ -15,6 +15,10 @@
     &--foot {
         display: block;
         margin: 0 0 20px 0;
+    }
+    @media screen and (min-width:1200px) {
+        font-size: 26px;
+        line-height: 31px;
     }
 }
 
