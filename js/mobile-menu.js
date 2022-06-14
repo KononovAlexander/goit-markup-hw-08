@@ -3,6 +3,7 @@
   const mobileMenuRef = document.querySelector("[data-menu]");
   const iconMenu = document.querySelector(".icon-menu");
   const iconMenuClose = document.querySelector(".icon-menu-close");
+  const body = document.querySelector("body");
 
   menuBtnRef.addEventListener("click", () => {
     const expanded =
@@ -14,5 +15,6 @@
     mobileMenuRef.classList.toggle("is-open");
     iconMenu.classList.toggle("is-open");
     iconMenuClose.classList.toggle("is-open");
+    body.classList.toggle("scroll-off");
   });
 })();

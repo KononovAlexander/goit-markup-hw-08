@@ -34,6 +34,9 @@
             &:nth-child(odd){
                 margin: 0 30px 0 0;
             }
+            &:not(:nth-last-child(-n + 2)) {
+                margin: 0 0 30px 0;
+            }
         }
         @media screen and (min-width: 1200px) {
             min-width: auto;

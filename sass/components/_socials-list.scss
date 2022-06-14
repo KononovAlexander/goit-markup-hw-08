@@ -4,12 +4,10 @@
     @media screen and(min-width:1200px) {
         margin: 0;
     }
-    &__item {
+    &__item:not(:last-child) {
         margin-right: 10px;
     }
-    &__item:last-child {
-        margin-right: 0;
-    }
+ 
     &__link {
         width: 44px;
         height: 44px; 
@@ -26,12 +24,10 @@
             color:#ffffff;
             border-color:var(--brand-color);
         }
-
-
     }
     &-foot {
-        @extend .socials-list;        display: flex;
-
+        @extend .socials-list;       
+        display: flex;
     }
     &__link-dark {
         @extend .socials-list__link;

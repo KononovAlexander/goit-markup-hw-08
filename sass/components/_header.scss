@@ -2,6 +2,7 @@
     position: relative;
     padding-top: 16px;
     padding-bottom: 16px;
+    border-bottom: 1px solid #ECECEC;
     @media screen and (min-width: 1200px) {
         padding-top: 32px;
         padding-bottom: 32px;
@@ -13,6 +14,7 @@
     margin: 0;
     border:none;
     background-color: inherit;
+    z-index: 10;
     &:hover,
     &:focus {
         color: var(--brand-color);
@@ -41,7 +43,7 @@
         background-color: #ffffff;
         padding: 0;
         @media screen  and (max-width: 767px) {
-                position: absolute;
+                position: fixed;
                 top: 0;
                 left: 0;
                 width: 100%;
@@ -49,6 +51,7 @@
                 padding: 48px 40px;
                 flex-direction: column;
                 align-items: start;
+                z-index: 10;
             }
             @media screen and (min-width: 768px) {
                 display:flex;
@@ -135,15 +138,13 @@
     @media screen and (min-width:1199px) {
         flex-direction: row;
         align-items: center;
-
     }
-     @media screen  and (max-width: 767px) {
+    @media screen  and (max-width: 767px) {
         flex-direction: column-reverse;
         margin-top: auto;
         margin-left: 0;
         margin-bottom: 63px;
         &__item {
-
                 &:last-child {
                 margin-bottom: 32px;
                 }
@@ -154,21 +155,20 @@
             margin-left: auto;
         }
     }
-
     &__item {
         display: flex;
         align-items:center;
+        @media screen and (min-width:1199px) {
+                &:not(:last-child) {
+                    margin-right: 30px;
+                }
+        }
         @media screen and (max-width:1200px) {
                 &:first-child {
                     margin-bottom: 10px;
-                }        
-        }
-        &:not(:last-child) {
-            margin-right: 30px;
-        }
-    
+                    }        
+                }
     }
-
     &__link {
         font-weight: 500;
         font-size: 24px;
@@ -190,14 +190,14 @@
                 font-size: 14px;
                 line-height: 16px;
             }
-            @media screen and (max-width: 480px) {
+            @media screen and (max-width: 767px) {
                 &--tel {
                 color: var(--brand-color);
                 font-size: 34px;
                 line-height: 40px;
                 letter-spacing: 0.02em;
+                }
             }
-        }
  
         }
     &__icon {
@@ -206,13 +206,7 @@
             display: none;
         }
     }
-
-        @media screen and (min-width: 480px) {
-            margin-right: 10px;
-        }
-
 }    
-
 .socials-nav {
     display: none;
     width: 100%;
